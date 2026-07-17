@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "siris-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "cwd": "/Users/claudiomartinez/Desktop/siris/siris",
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

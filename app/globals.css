@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette SIRIS — oro della birra su notte scura */
+  --night: #0b0906;
+  --night-soft: #14100a;
+  --panel: #191308;
+  --gold: #fecc00;
+  --amber: #e8a020;
+  --amber-deep: #a3641a;
+  --cream: #f5eedc;
+  --cream-dim: #b8ad93;
+  --hop: #8fa86b;
+  /* Notte Bianca */
+  --midnight: #070b1e;
+  --midnight-soft: #0d1330;
+  --moon: #e4e9ff;
+  --moon-dim: #8ea0d8;
+
+  --background: var(--night);
+  --foreground: var(--cream);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-night: var(--night);
+  --color-night-soft: var(--night-soft);
+  --color-panel: var(--panel);
+  --color-gold: var(--gold);
+  --color-amber: var(--amber);
+  --color-amber-deep: var(--amber-deep);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-hop: var(--hop);
+  --color-midnight: var(--midnight);
+  --color-midnight-soft: var(--midnight-soft);
+  --color-moon: var(--moon);
+  --color-moon-dim: var(--moon-dim);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bebas);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Evita scroll orizzontali indesiderati senza creare un nuovo scroll container */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Titoli display in stile poster (Bebas Neue, come il lettering del logo) */
+.font-display {
+  font-family: var(--font-bebas), var(--font-geist-sans), sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Etichetta micro in stile HUD della grafica di riferimento */
+.hud-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+/* Card con angoli marcati, reinterpretazione dei riquadri della reference */
+.corner-frame {
+  position: relative;
+}
+.corner-frame::before,
+.corner-frame::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: color-mix(in srgb, var(--gold) 60%, transparent);
+  border-style: solid;
+  pointer-events: none;
+}
+.corner-frame::before {
+  top: -1px;
+  left: -1px;
+  border-width: 1px 0 0 1px;
+}
+.corner-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 1px 1px 0;
+}
+
+/* Testo dorato con leggero bagliore */
+.text-glow {
+  text-shadow: 0 0 24px color-mix(in srgb, var(--gold) 35%, transparent);
+}
+
+.text-glow-moon {
+  text-shadow: 0 0 24px color-mix(in srgb, var(--moon) 45%, transparent);
+}
+
+/* Focus visibile e coerente ovunque */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--night);
+}
+
+/* Scrollbar discreta in tema */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--night);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a2f18;
+    border-radius: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
