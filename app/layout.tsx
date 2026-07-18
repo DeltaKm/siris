@@ -19,9 +19,9 @@ const bebas = Bebas_Neue({
   subsets: ["latin"],
 });
 
-const title = "SIRIS – Festa della Birra di Caiazzo | 28, 29 e 30 Agosto 2026";
+const title = "SIRIS – Festa della Birra | 28, 29 e 30 Agosto 2026";
 const description =
-  "Il 28, 29 e 30 agosto 2026 arriva SIRIS, la Festa della Birra di Caiazzo. Il 29 agosto appuntamento speciale con la Notte Bianca. Birra, food, musica e divertimento.";
+  "Il 28, 29 e 30 agosto 2026 a Caiazzo arriva SIRIS, la Festa della Birra. Il 29 agosto appuntamento speciale con la Notte Bianca. Birra, food, musica e divertimento.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(eventData.siteUrl),
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: "SIRIS – Festa della Birra di Caiazzo",
+    siteName: "SIRIS – Festa della Birra",
     locale: "it_IT",
     type: "website",
     images: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: "/logos/siris/siris-logo.png",
         width: 204,
         height: 204,
-        alt: "Logo SIRIS – Festa della Birra di Caiazzo",
+        alt: "Logo SIRIS – Festa della Birra",
       },
     ],
   },
@@ -89,6 +89,8 @@ const jsonLd = {
     name: eventData.venue.name,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Piazza Santo Stefano Menecillo",
+      postalCode: "81013",
       addressLocality: eventData.town,
       addressRegion: eventData.province,
       addressCountry: eventData.country,

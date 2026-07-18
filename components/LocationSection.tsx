@@ -65,12 +65,11 @@ export default function LocationSection() {
             </ul>
           </Reveal>
 
-          {/* Spazio mappa: sostituire l'iframe con l'embed dell'area evento */}
           <Reveal from="left">
             <div className="corner-frame flex h-full min-h-72 flex-col overflow-hidden border border-gold/15 bg-panel/50">
               <iframe
-                title="Mappa di Caiazzo"
-                src="https://www.google.com/maps?q=Caiazzo%20CE&output=embed"
+                title="Mappa dell'area evento a Caiazzo"
+                src="https://www.google.com/maps?q=Piazza%20Santo%20Stefano%20Menecillo%2081013%20Caiazzo%20CE&output=embed"
                 className="min-h-64 w-full flex-1 border-0 grayscale-[0.4] contrast-[1.05]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

@@ -80,7 +80,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.7 }}
         >
-          Festa della Birra di Caiazzo
+          Festa della Birra
         </motion.p>
 
         <motion.h1

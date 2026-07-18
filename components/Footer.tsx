@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import type { SVGProps } from "react";
 import { eventData } from "@/data/event-data";
@@ -53,12 +52,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-gold/10 bg-night-soft">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <Image
               src="/logos/siris/siris-logo.png"
-              alt="Logo SIRIS – Festa della Birra di Caiazzo"
+              alt="Logo SIRIS – Festa della Birra"
               width={72}
               height={72}
               className="h-18 w-18"
@@ -90,22 +89,15 @@ export default function Footer() {
               <Mail className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
               {eventData.contacts.email}
             </a>
-            {eventData.contacts.whatsappUrl ? (
-              <a
-                href={eventData.contacts.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-cream-dim transition-colors hover:text-gold"
-              >
-                <MessageCircle className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                WhatsApp
-              </a>
-            ) : (
-              <p className="flex items-center gap-2 text-sm text-cream-dim">
-                <MessageCircle className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
-                WhatsApp [numero da confermare]
-              </p>
-            )}
+            <a
+              href={eventData.contacts.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-cream-dim transition-colors hover:text-gold"
+            >
+              <MessageCircle className="h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
+              WhatsApp {eventData.contacts.whatsapp}
+            </a>
             <div className="mt-1 flex gap-3">
               {socialLinks.map((social) => {
                 const Icon = socialIcons[social.id];
@@ -125,22 +117,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link legali */}
-          <div className="flex flex-col gap-3">
-            <h3 className="hud-label text-gold/80">Informazioni</h3>
-            <Link
-              href="/privacy-policy"
-              className="text-sm text-cream-dim transition-colors hover:text-gold"
-            >
-              Privacy policy
-            </Link>
-            <Link
-              href="/cookie-policy"
-              className="text-sm text-cream-dim transition-colors hover:text-gold"
-            >
-              Cookie policy
-            </Link>
-          </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-2 border-t border-gold/10 pt-6 text-center">

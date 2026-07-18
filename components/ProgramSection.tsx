@@ -39,7 +39,7 @@ export default function ProgramSection() {
         <SectionHeading
           eyebrow="Il programma"
           title="Programma delle serate"
-          subtitle="Gli appuntamenti indicati sono segnaposto: il programma ufficiale sarà annunciato a breve."
+          subtitle="Il programma ufficiale sarà annunciato a breve: ecco un'anteprima delle tre serate."
         />
 
         {/* Tab dei giorni */}

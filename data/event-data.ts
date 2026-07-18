@@ -1,12 +1,11 @@
 /**
  * Dati principali dell'evento SIRIS.
  * Modifica qui date, luogo, contatti e testi generali.
- * I valori contrassegnati con [DA CONFERMARE] sono segnaposto.
  */
 
 export const eventData = {
   name: "SIRIS",
-  fullName: "SIRIS – Festa della Birra di Caiazzo",
+  fullName: "SIRIS – Festa della Birra",
   tagline: "Tre notti di birra, musica, sapori e divertimento nel cuore di Caiazzo.",
   town: "Caiazzo",
   province: "CE",
@@ -17,24 +16,23 @@ export const eventData = {
   startDate: "2026-08-28",
   endDate: "2026-08-30",
   datesLabel: "28 · 29 · 30 Agosto 2026",
-  // Orario indicativo di apertura serale [DA CONFERMARE]
-  openingTime: "Dalle ore 19:00 [orario da confermare]",
+  openingTime: "Dalle ore 19:00",
   venue: {
-    name: "Centro storico di Caiazzo [zona da confermare]",
-    address: "Caiazzo (CE) — indirizzo esatto da confermare",
-    // Link generico alla città: sostituire con il pin esatto dell'area evento
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Caiazzo+CE",
+    name: "Piazza Santo Stefano Menecillo, Caiazzo",
+    address: "P.za S. Stefano Menecillo, 81013 Caiazzo (CE)",
+    googleMapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Piazza+Santo+Stefano+Menecillo+81013+Caiazzo+CE",
   },
-  parking: "Informazioni su parcheggi e aree di sosta in aggiornamento. [DA CONFERMARE]",
-  accessibility: "Informazioni sull'accessibilità dell'area evento in aggiornamento. [DA CONFERMARE]",
+  parking: "Informazioni su parcheggi e aree di sosta in aggiornamento.",
+  accessibility: "Informazioni sull'accessibilità dell'area evento in aggiornamento.",
   contacts: {
-    email: "info@sirisfestival.it", // [DA CONFERMARE]
-    whatsapp: "", // es. "+39 333 0000000" [DA CONFERMARE]
-    whatsappUrl: "", // es. "https://wa.me/393330000000"
+    email: "info@sirisbeerfest.it",
+    sponsorEmail: "sponsor@sirisbeerfest.it",
+    whatsapp: "+39 389 549 1390",
+    whatsappUrl: "https://wa.me/393895491390",
   },
-  organizers: "Organizzato dall'Associazione Tetris [DA CONFERMARE]",
-  // URL canonico del sito: sostituire con il dominio definitivo
-  siteUrl: "https://www.sirisfestival.it",
+  organizers: "Organizzato dall'Associazione Tetris ETS",
+  siteUrl: "https://www.sirisbeerfest.it",
 } as const;
 
 export const whiteNight = {
@@ -49,17 +47,17 @@ export const whiteNight = {
     {
       time: "19:00",
       title: "Apertura Notte Bianca",
-      description: "Locali aperti e animazione per le vie del centro. [Programma da confermare]",
+      description: "Locali aperti e animazione per le vie del centro.",
     },
     {
       time: "21:00",
       title: "Musica e spettacoli",
-      description: "Esibizioni diffuse nel centro storico. [Programma da confermare]",
+      description: "Esibizioni diffuse nel centro storico.",
     },
     {
       time: "24:00",
       title: "Fino a tarda notte",
-      description: "SIRIS e Notte Bianca insieme fino a tarda sera. [Programma da confermare]",
+      description: "SIRIS e Notte Bianca insieme fino a tarda sera.",
     },
   ],
 } as const;

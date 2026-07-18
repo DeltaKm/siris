@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
+import ParticleField from "@/components/ParticleField";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -58,7 +59,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-night/80 backdrop-blur-md border-b border-gold/10 py-2"
+          ? "bg-night border-b border-gold/10 py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -70,7 +71,7 @@ export default function Header() {
         >
           <Image
             src="/logos/siris/siris-logo.png"
-            alt="Logo SIRIS – Festa della Birra di Caiazzo"
+            alt="Logo SIRIS – Festa della Birra"
             width={48}
             height={48}
             className={`transition-all duration-300 ${scrolled ? "h-10 w-10" : "h-12 w-12"}`}
@@ -122,11 +123,24 @@ export default function Header() {
             : { opacity: 0, y: reduceMotion ? 0 : -16 }
         }
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className={`lg:hidden fixed inset-0 top-0 z-40 flex flex-col bg-night/95 backdrop-blur-lg px-6 pt-24 pb-10 ${
+        className={`lg:hidden fixed inset-0 top-0 z-40 flex flex-col overflow-y-auto bg-night px-6 pt-24 pb-10 ${
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        <ul className="flex flex-col gap-2">
+        {/* Particelle dorate come nella hero, solo a menu aperto */}
+        {menuOpen && (
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            <ParticleField density={0.5} variant="gold" connect={false} />
+          </div>
+        )}
+        <Image
+          src="/logos/siris/siris-logo.png"
+          alt="Logo SIRIS – Festa della Birra"
+          width={96}
+          height={96}
+          className="relative mb-4 h-20 w-20 self-center"
+        />
+        <ul className="relative flex flex-col gap-2">
           {navItems.map((item, index) => (
             <motion.li
               key={item.href}
@@ -151,7 +165,7 @@ export default function Header() {
             </motion.li>
           ))}
         </ul>
-        <p className="hud-label mt-auto text-gold/70">
+        <p className="hud-label relative mt-auto text-gold/70">
           28 · 29 · 30 Agosto 2026 — Caiazzo
         </p>
       </motion.nav>

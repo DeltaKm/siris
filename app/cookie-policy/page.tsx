@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | SIRIS – Festa della Birra di Caiazzo",
-  description: "Informativa sui cookie di SIRIS – Festa della Birra di Caiazzo.",
+  title: "Cookie Policy | SIRIS – Festa della Birra",
+  description: "Informativa sui cookie di SIRIS – Festa della Birra.",
 };
 
 /** Pagina segnaposto: inserire qui la cookie policy definitiva. */

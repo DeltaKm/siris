@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 
 // Testo di presentazione: modificabile liberamente
 const aboutText =
-  "SIRIS è la Festa della Birra di Caiazzo: tre serate dedicate alla birra, alla musica, al buon cibo e al divertimento. Dal 28 al 30 agosto vivi insieme a noi uno degli appuntamenti più attesi dell'estate.";
+  "SIRIS è la Festa della Birra: tre serate a Caiazzo dedicate alla birra, alla musica, al buon cibo e al divertimento. Dal 28 al 30 agosto vivi insieme a noi uno degli appuntamenti più attesi dell'estate.";
 
 const keywords = [
   { label: "Birra", icon: Beer },

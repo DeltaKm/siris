@@ -1,7 +1,6 @@
 /**
  * Programma delle tre serate.
- * Tutti i contenuti sono SEGNAPOSTO: sostituisci titoli, orari e
- * descrizioni con il programma reale quando disponibile.
+ * Aggiorna titoli, orari e descrizioni man mano che il programma si definisce.
  */
 
 export interface ProgramItem {
@@ -35,14 +34,14 @@ export const programDays: EventDay[] = [
     title: "Serata di apertura",
     subtitle: "Il via alla festa",
     description:
-      "La prima serata di SIRIS 2026: apertura degli stand, prime birre alla spina e musica dal vivo. [Descrizione da confermare]",
+      "La prima serata di SIRIS 2026: apertura degli stand, prime birre alla spina e musica dal vivo.",
     image: "/images/gallery/palco-band.png",
     imageAlt: "Band sul palco durante una precedente edizione di SIRIS",
     items: [
       {
         time: "19:00",
         title: "Apertura stand",
-        description: "Apertura area food e birre. [Da confermare]",
+        description: "Apertura area food e birre.",
         location: "Area festa",
         icon: "beer",
       },
@@ -70,7 +69,7 @@ export const programDays: EventDay[] = [
     title: "SIRIS + Notte Bianca",
     subtitle: "La notte più lunga dell'estate",
     description:
-      "La serata evento: SIRIS incontra la Notte Bianca di Caiazzo. Locali aperti, spettacoli diffusi e festa fino a tarda notte. [Programma da confermare]",
+      "La serata evento: SIRIS incontra la Notte Bianca di Caiazzo. Locali aperti, spettacoli diffusi e festa fino a tarda notte.",
     image: "/images/gallery/spettacolo-fuoco.jpeg",
     imageAlt: "Spettacolo di fuoco in una precedente edizione",
     isWhiteNight: true,
@@ -78,7 +77,7 @@ export const programDays: EventDay[] = [
       {
         time: "19:00",
         title: "Apertura stand + Notte Bianca",
-        description: "Locali aperti in tutto il centro. [Da confermare]",
+        description: "Locali aperti in tutto il centro.",
         location: "Centro storico",
         icon: "star",
       },
@@ -92,14 +91,14 @@ export const programDays: EventDay[] = [
       {
         time: "22:30",
         title: "Spettacoli itineranti",
-        description: "Artisti di strada e animazione. [Da confermare]",
+        description: "Artisti di strada e animazione.",
         location: "Vie del centro",
         icon: "sparkles",
       },
       {
         time: "24:00",
         title: "Notte Bianca fino a tardi",
-        description: "Musica e locali aperti fino a tarda notte. [Da confermare]",
+        description: "Musica e locali aperti fino a tarda notte.",
         location: "Centro storico",
         icon: "star",
       },
@@ -113,14 +112,14 @@ export const programDays: EventDay[] = [
     title: "Gran finale",
     subtitle: "L'ultima serata",
     description:
-      "La serata conclusiva di SIRIS 2026: ultime spine, sapori d'estate e il gran finale sul palco. [Descrizione da confermare]",
+      "La serata conclusiva di SIRIS 2026: ultime spine, sapori d'estate e il gran finale sul palco.",
     image: "/images/gallery/piazza-live.png",
     imageAlt: "Concerto in piazza durante una precedente edizione",
     items: [
       {
         time: "19:00",
         title: "Apertura stand",
-        description: "Ultima serata di birre e food. [Da confermare]",
+        description: "Ultima serata di birre e food.",
         location: "Area festa",
         icon: "utensils",
       },
@@ -134,7 +133,7 @@ export const programDays: EventDay[] = [
       {
         time: "23:30",
         title: "Chiusura della festa",
-        description: "Saluti e arrivederci al prossimo anno. [Da confermare]",
+        description: "Saluti e arrivederci al prossimo anno.",
         location: "Palco principale",
         icon: "sparkles",
       },

@@ -52,10 +52,4 @@ export const galleryImages: GalleryImage[] = [
     width: 410,
     height: 220,
   },
-  {
-    src: "/images/gallery/dj-set.jpg",
-    alt: "Dj set serale",
-    width: 410,
-    height: 220,
-  },
 ];

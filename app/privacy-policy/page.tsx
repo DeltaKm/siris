@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | SIRIS – Festa della Birra di Caiazzo",
-  description: "Informativa sulla privacy di SIRIS – Festa della Birra di Caiazzo.",
+  title: "Privacy Policy | SIRIS – Festa della Birra",
+  description: "Informativa sulla privacy di SIRIS – Festa della Birra.",
 };
 
 /** Pagina segnaposto: inserire qui l'informativa privacy definitiva. */

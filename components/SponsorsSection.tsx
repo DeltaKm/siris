@@ -22,10 +22,7 @@ const tierCardWidths: Record<SponsorTier, string> = {
 
 /** Area sponsor organizzata per categorie, con CTA "Diventa sponsor". */
 export default function SponsorsSection() {
-  // Link della CTA: WhatsApp se configurato, altrimenti email
-  const sponsorCtaHref = eventData.contacts.whatsappUrl
-    ? eventData.contacts.whatsappUrl
-    : `mailto:${eventData.contacts.email}?subject=Sponsor%20SIRIS%202026`;
+  const sponsorCtaHref = `mailto:${eventData.contacts.sponsorEmail}?subject=Sponsor%20SIRIS%202026`;
 
   return (
     <section id="sponsor" className="relative py-24 sm:py-32">

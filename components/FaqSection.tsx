@@ -14,7 +14,7 @@ export default function FaqSection() {
         <SectionHeading
           eyebrow="FAQ"
           title="Domande frequenti"
-          subtitle="Le risposte contrassegnate come da confermare saranno aggiornate a breve."
+          subtitle="Tutto quello che c'è da sapere per vivere al meglio la festa."
         />
 
         <div className="mt-12 flex flex-col gap-3">

@@ -2,7 +2,6 @@
  * Sponsor di SIRIS.
  * Aggiungi, rimuovi o sposta gli sponsor tra le categorie modificando
  * questo file. I loghi vanno in `public/images/sponsors/`.
- * L'assegnazione delle categorie qui sotto è di ESEMPIO. [DA CONFERMARE]
  */
 
 export type SponsorTier = "main" | "gold" | "partner" | "technical";
@@ -33,7 +32,7 @@ export const sponsors: Sponsor[] = [
     name: "Il Buco – Locale Diffuso",
     logo: "/images/sponsors/il-buco.png",
     tier: "main",
-    description: "Locale diffuso nel centro di Caiazzo. [Categoria di esempio]",
+    description: "Locale diffuso nel centro di Caiazzo.",
     needsLightBackground: true,
   },
   {
@@ -41,7 +40,6 @@ export const sponsors: Sponsor[] = [
     name: "Sushi Cafone",
     logo: "/images/sponsors/sushi-cafone.png",
     tier: "gold",
-    description: "[Categoria di esempio]",
     needsLightBackground: true,
   },
   {
@@ -49,7 +47,6 @@ export const sponsors: Sponsor[] = [
     name: "CMH",
     logo: "/images/sponsors/cmh.png",
     tier: "technical",
-    description: "[Categoria di esempio]",
     needsLightBackground: true,
   },
 ];
