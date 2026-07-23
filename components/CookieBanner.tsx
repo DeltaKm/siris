@@ -5,7 +5,10 @@ import Link from "next/link";
 import Script from "next/script";
 
 const CONSENT_KEY = "siris-cookie-consent";
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// L'ID è pubblico per natura (visibile comunque nel sorgente della pagina).
+// NEXT_PUBLIC_GA_ID viene inlined in build: su Cloud Run le env di runtime
+// non bastano, quindi il default è nel codice.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-FS6FRQ457H";
 
 type Consent = "granted" | "denied" | null;
 
