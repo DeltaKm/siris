@@ -28,17 +28,22 @@ export const tierOrder: SponsorTier[] = ["main", "gold", "partner", "technical"]
 
 export const sponsors: Sponsor[] = [
   {
-    id: "il-buco",
-    name: "Il Buco – Locale Diffuso",
-    logo: "/images/sponsors/il-buco.png",
+    id: "df-service",
+    name: "DF Service",
+    logo: "/images/sponsors/df-logo.png",
     tier: "main",
-    description: "Locale diffuso nel centro di Caiazzo.",
+  },
+  {
+    id: "shadow-computer",
+    name: "Shadow Computer",
+    logo: "/images/sponsors/shadow.jpeg",
+    tier: "gold",
     needsLightBackground: true,
   },
   {
-    id: "sushi-cafone",
-    name: "Sushi Cafone",
-    logo: "/images/sponsors/sushi-cafone.png",
+    id: "sballando",
+    name: "Sballando",
+    logo: "/images/sponsors/sballando.png",
     tier: "gold",
     needsLightBackground: true,
   },
