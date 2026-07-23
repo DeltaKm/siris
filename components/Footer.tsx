@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import type { SVGProps } from "react";
 import { eventData } from "@/data/event-data";
@@ -122,6 +123,20 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center gap-2 border-t border-gold/10 pt-6 text-center">
           <p className="text-xs text-cream-dim">
             © {eventData.year} {eventData.fullName}. Tutti i diritti riservati.
+          </p>
+          <p className="flex gap-4 text-xs">
+            <Link
+              href="/privacy-policy"
+              className="text-cream-dim transition-colors hover:text-gold"
+            >
+              Privacy policy
+            </Link>
+            <Link
+              href="/cookie-policy"
+              className="text-cream-dim transition-colors hover:text-gold"
+            >
+              Cookie policy
+            </Link>
           </p>
         </div>
       </div>

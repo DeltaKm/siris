@@ -32,7 +32,7 @@ export const eventData = {
     whatsappUrl: "https://wa.me/393895491390",
   },
   organizers: "Organizzato dall'Associazione Tetris ETS",
-  siteUrl: "https://www.sirisbeerfest.it",
+  siteUrl: "https://sirisbeerfest.it",
 } as const;
 
 export const whiteNight = {
