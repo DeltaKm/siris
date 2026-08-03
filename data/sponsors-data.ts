@@ -54,4 +54,11 @@ export const sponsors: Sponsor[] = [
     tier: "technical",
     needsLightBackground: true,
   },
+  {
+    id: "paglia",
+    name: "Paglia – Ristorante Pizzeria",
+    logo: "/images/sponsors/paglia.jpeg",
+    tier: "technical",
+    needsLightBackground: true,
+  },
 ];
